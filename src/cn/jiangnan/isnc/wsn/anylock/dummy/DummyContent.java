@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cn.jiangnan.isnc.wsn.anylock.R;
+
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -25,9 +28,9 @@ public class DummyContent {
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "Building B", R.drawable.floor));
+        addItem(new DummyItem("2", "Floor B3", R.drawable.floor));
+        addItem(new DummyItem("3", "Office 305", R.drawable.office));
     }
 
     private static void addItem(DummyItem item) {
@@ -41,10 +44,12 @@ public class DummyContent {
     public static class DummyItem {
         public String id;
         public String content;
+        public int map;
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String content, int res) {
             this.id = id;
             this.content = content;
+            this.map = res;
         }
 
         @Override

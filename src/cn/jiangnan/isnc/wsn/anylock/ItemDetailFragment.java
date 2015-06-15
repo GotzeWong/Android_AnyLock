@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import cn.jiangnan.isnc.wsn.anylock.dummy.DummyContent;
 
 /**
@@ -54,6 +54,7 @@ public class ItemDetailFragment extends Fragment {
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
             ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.content);
+            ((LinearLayout) rootView.findViewById(R.id.item_map)).setBackgroundResource(mItem.map);
         }
 
         return rootView;
